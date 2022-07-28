@@ -299,50 +299,17 @@ div.services{
     margin: 1rem 0 3rem 0;
 }
 
-section.small-table{
+section.table{
     width: 95%;
     margin: 0 auto;
 }
 
 div.smaller-table{
-    display: flex;
-    justify-content: space-between;
-    column-gap: 1rem;
-    align-items: flex-start;
+    display: none;
 }
 
-div.smaller-table > div{
-    border: solid 1px black;
-    flex: 30%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 1rem;
-}
-
-div.smaller-table > div i{
-    font-size: 0.8rem;
-    color: #06f;
-}
-
-div.smaller-table > div > a{
-    text-decoration: none;
-    padding-top: 0;
-}
-
-div.smaller-table > div > div.feature{
-    display: flex;
-}
-
-div.smaller-table div a.gmail{
-    color: white;
-    font-weight: bold;
-    background: #06f;
-    border-radius: 0.3rem;
-}
-
-div.smaller-table div a.gmail:hover{
-    background: #1337c0;
+div.smallest-table{
+    display: none;
 }
 
 section#section-6{
@@ -589,4 +556,192 @@ div.languages-form select{
     nav div.links a.create-acc{
         display: none;
     }
+    
+    div.smallest-table{
+        display: none;
+    }
+
+    div.smaller-table{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        column-gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    div.smaller-table > div{
+        border: solid 1px rgb(213, 213, 213);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        text-align: left;
+    }
+    
+    div.smaller-table div p{
+        font-size: 0.85rem !important;
+    }
+    
+    div.smaller-table > div p.price{
+        font-weight: bold;
+    }
+    
+    div.smaller-table span{
+        font-weight: bold;
+    }
+    
+    div.smaller-table > div p.price span{
+        font-size: 1.4rem;
+        color: black;
+    }
+    
+    div.smaller-table div p.usage{
+        font-size: 1rem !important;
+    }
+    
+    div.smaller-table div p.usage:nth-of-type(1){
+        font-weight: bold;
+        color: black;
+    }
+    
+    div.smaller-table > div p.price.special{
+        font-size: 1rem !important;
+    }
+    
+    div.smaller-table > div p.price small{
+        font-weight: lighter;
+        text-decoration: line-through;
+    }
+    
+    div.smaller-table > div i{
+        font-size: 0.8rem;
+        color: #06f;
+        margin-right: 0.5rem;
+    }
+    
+    div.smaller-table div div.link{
+        padding: 0.75rem 0;
+    }
+    
+    div.smaller-table > div >  p > span{
+        font-weight: bold;
+    }
+    
+    div.smaller-table div div a.gmail{
+        color: white;
+        font-weight: bold;
+        background: #06f;
+        border-radius: 0.3rem;
+        padding: 0.7rem 1rem;
+        text-decoration: none;
+        font-size: 0.85rem;
+        margin: 1.5rem 0;
+    }
+    
+    div.smaller-table div div a.gmail:hover{
+        background: #1337c0;
+    }
+    
+    section.small-table p.info{
+        text-align: left;
+        font-size: 0.7rem;
+        margin: 1rem 0;
+    }
+    
+    p.info.second{
+        margin: 0;
+    }
+        
+}
+
+@media screen and (max-width: 600px){
+    div.smaller-table{
+        display: none;
+    }
+
+    section.table{
+        width: unset;
+    }
+
+    div.smallest-table{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        row-gap: 1.5rem;
+    }
+
+    div.smallest-table > div{
+        border: solid 1px rgb(216, 216, 216);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    div.smallest-table > div > div.price-and-link{
+        margin: 0px;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div.smallest-table div div a.gmail{
+        color: white;
+        font-weight: bold;
+        background: #06f;
+        border-radius: 0.3rem;
+        padding: 0.7rem 1rem;
+        text-decoration: none;
+        font-size: 0.85rem;
+    }
+    
+    div.smallest-table div div a.gmail:hover{
+        background: #1337c0;
+        color: white;
+    }
+
+    div.smallest-table div p{
+        font-size: 0.85rem !important;
+    }
+    
+    div.smallest-table div p.price{
+        font-weight: bold;
+    }
+    
+    div.smallest-table span{
+        font-weight: bold;
+    }
+    
+    div.smallest-table div p.price span{
+        font-size: 1.4rem;
+        color: black;
+    }
+    
+    div.smallest-table div p.price.special{
+        font-size: 1rem !important;
+    }
+    
+    div.smallest-table div p.price small{
+        font-weight: lighter;
+        text-decoration: line-through;
+    }
+    
+    div.smallest-table > div >  p > span{
+        font-weight: bold;
+    }
+
+    div.smallest-table i{
+        padding: 0.5rem;
+        color: dodgerblue;
+    }
+
+    div.smallest-table div div.feature-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        cursor: pointer;
+    }
+
 }
