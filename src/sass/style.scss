@@ -1,11 +1,9 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import "_reset";
+@import "_variables";
+@import "_mixins";
 
 body{
-    font-family: "Poppins", sans-serif;
+    font-family: $websites-font;
     overflow-x: hidden;
 }
 
@@ -41,41 +39,29 @@ div.links{
     column-gap: 1rem;
 }
 
-div.links a{
-    text-decoration: none;
-    padding: 0.7rem 1rem;
-}
-
 a.work{
-    color: #06f;
-    font-weight: bold;
+    @include make-btn($light_blue_btn, transparent, none, none, none, none);
 }
 
 a.work:hover{
-    background: aliceblue;
+    @include btn-hover(aliceblue);
 }
 
 a.sign-in{
-    color: #06f;
-    font-weight: bold;
-    border: solid 1px #d1d1d1;
-    border-radius: 0.3rem;
+    @include make-btn($light_blue_btn, transparent, solid, #d1d1d1, 1px, 0.3rem);
 }
 
 a.sign-in:hover{
-    background: rgb(241, 241, 241);
-    border: solid 1px dodgerblue;
+    @include btn-hover(#f1f1f1);
+    @include make_border(solid, dodgerblue, 1px, 0.3rem);
 }
 
 a.create-acc, a.get-gmail{
-    color: white;
-    font-weight: bold;
-    background: #06f;
-    border-radius: 0.3rem;
+    @include make-btn(white, $light_blue_btn, none, none, none, 0.3rem);
 }
 
 a.create-acc:hover, a.get-gmail:hover{
-    background: #1337c0;
+    @include btn-hover($dark_blue_btn);
 }
 
 a.get-gmail{
@@ -279,14 +265,12 @@ div.section-5 p:nth-child(2){
 }
 
 div.section-5 a{
-    text-decoration: none;
     margin-top: 3rem;
-    color: #06f;
-    font-weight: bold;
+    @include make-btn(white, $light_blue_btn, none, none, none, 0.3rem);
 }
 
 div.section-5 a:hover{
-    color: #1337c0;
+   @include btn-hover($dark_blue_btn)
 }
 
 div.section-5 > p:nth-of-type(2){
