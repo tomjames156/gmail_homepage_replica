@@ -16,3 +16,7 @@
     color: $color;
     background: $bg;
 }
+
+@mixin removeItem(){
+    display: none;
+}

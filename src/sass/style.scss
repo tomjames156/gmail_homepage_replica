@@ -44,7 +44,7 @@ a.work{
 }
 
 a.work:hover{
-    @include btn-hover(aliceblue);
+    @include btn-hover(aliceblue, darken($light_blue_btn, 10));
 }
 
 a.sign-in{
@@ -52,8 +52,7 @@ a.sign-in{
 }
 
 a.sign-in:hover{
-    @include btn-hover(#f1f1f1);
-    @include make_border(solid, dodgerblue, 1px, 0.3rem);
+    @include make_btn(darken($light_blue_btn, 10), rgb(241, 241, 241), solid, dodgerblue, 1px, 0.3rem);
 }
 
 a.create-acc, a.get-gmail{
@@ -65,7 +64,7 @@ a.create-acc:hover, a.get-gmail:hover{
 }
 
 a.get-gmail{
-    display: none;
+    @include removeItem()
 }
 
 section#section-1{
@@ -266,11 +265,11 @@ div.section-5 p:nth-child(2){
 
 div.section-5 a{
     margin-top: 3rem;
-    @include make-btn(white, $light_blue_btn, none, none, none, 0.3rem);
+    @include make-btn($light_blue_btn, transparent, none, none, none, 0);
 }
 
 div.section-5 a:hover{
-   @include btn-hover($dark_blue_btn)
+   @include btn-hover(transparent, darken($light_blue_btn, 10));
 }
 
 div.section-5 > p:nth-of-type(2){
@@ -338,16 +337,12 @@ div.help > p{
     color: #606060;
 }
 
-a.help-center{
-    color: #06f;
-    font-weight: bold;
-    border: solid 1px #d1d1d1;
-    border-radius: 0.3rem;
+.help-center{
+    @include make-btn( $light_blue_btn, transparent, solid, #d1d1d1, 1px, 0.3rem);
 }
 
-a.help-center:hover{
-    background: rgb(241, 241, 241);
-    border: solid 1px dodgerblue;
+.help-center:hover{
+    @include make_btn(darken($light_blue_btn, 10), rgb(241, 241, 241), solid, dodgerblue, 1px, 0.3rem);
 }
 
 div.section-6 div.item-2{
@@ -538,11 +533,11 @@ div.languages-form select{
     }
 
     nav div.links a.create-acc{
-        display: none;
+        @include removeItem();
     }
     
     div.smallest-table{
-        display: none;
+        @include removeItem();
     }
 
     div.smaller-table{
@@ -550,97 +545,123 @@ div.languages-form select{
         grid-template-columns: repeat(3, 1fr) !important;
         column-gap: 1rem;
         flex-wrap: wrap;
+
+        > div{
+            border: solid 1px rgb(213, 213, 213);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.5rem;
+            text-align: left;
+
+            > a{
+                margin: 1rem;
+            }
+
+            i{
+                font-size: 0.8rem;
+                color: #06f;
+                margin-right: 0.5rem;
+            }
+
+            > p > span{
+                font-weight: bold;
+            }
+
+            p.price{
+
+                font-weight: bold;
+
+                span{
+                    font-size: 1.4rem;
+                    color: black;
+                }
+
+                small{
+                    font-weight: lighter;
+                    text-decoration: line-through;
+                }
+            }
+
+            p.price.special{
+                font-size: 1rem !important;
+            }
+
+        }
+
+        div {
+            
+            p{
+                font-size: 0.85rem !important;
+            }
+
+            p.usage{
+                font-size: 1rem !important;
+
+                a{
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            p.usage:nth-of-type(1){
+                font-weight: bold;
+                color: black;
+            }
+
+            div.link{
+                padding: 0.75rem 0;
+                margin-bottom: 1rem;
+            }
+
+            div{
+
+                a.gmail{
+                    // extend something
+                    color: white;
+                    font-weight: bold;
+                    background: #06f;
+                    border-radius: 0.3rem;
+                    padding: 0.7rem 1rem;
+                    text-decoration: none;
+                    font-size: 0.85rem;
+                    margin: 1.5rem 0;
+                }
+
+                a.gmail:hover{
+                    background: #1337c0;
+                }
+    
+            }
+        }
+
+        span{
+            font-weight: bold;
+        }
     }
     
-    div.smaller-table > div{
-        border: solid 1px rgb(213, 213, 213);
-        padding: 1rem;
-        border-radius: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        row-gap: 0.5rem;
-        text-align: left;
+    
+    section.small-table{
+
+        p.info{
+            text-align: left;
+            font-size: 0.7rem;
+            margin: 1rem 0;
+        }
+
+        p.info.second{
+            margin: 0;
+        }
+            
     }
     
-    div.smaller-table div p{
-        font-size: 0.85rem !important;
-    }
     
-    div.smaller-table > div p.price{
-        font-weight: bold;
-    }
-    
-    div.smaller-table span{
-        font-weight: bold;
-    }
-    
-    div.smaller-table > div p.price span{
-        font-size: 1.4rem;
-        color: black;
-    }
-    
-    div.smaller-table div p.usage{
-        font-size: 1rem !important;
-    }
-    
-    div.smaller-table div p.usage:nth-of-type(1){
-        font-weight: bold;
-        color: black;
-    }
-    
-    div.smaller-table > div p.price.special{
-        font-size: 1rem !important;
-    }
-    
-    div.smaller-table > div p.price small{
-        font-weight: lighter;
-        text-decoration: line-through;
-    }
-    
-    div.smaller-table > div i{
-        font-size: 0.8rem;
-        color: #06f;
-        margin-right: 0.5rem;
-    }
-    
-    div.smaller-table div div.link{
-        padding: 0.75rem 0;
-    }
-    
-    div.smaller-table > div >  p > span{
-        font-weight: bold;
-    }
-    
-    div.smaller-table div div a.gmail{
-        color: white;
-        font-weight: bold;
-        background: #06f;
-        border-radius: 0.3rem;
-        padding: 0.7rem 1rem;
-        text-decoration: none;
-        font-size: 0.85rem;
-        margin: 1.5rem 0;
-    }
-    
-    div.smaller-table div div a.gmail:hover{
-        background: #1337c0;
-    }
-    
-    section.small-table p.info{
-        text-align: left;
-        font-size: 0.7rem;
-        margin: 1rem 0;
-    }
-    
-    p.info.second{
-        margin: 0;
-    }
-        
 }
 
 @media screen and (max-width: 600px){
     div.smaller-table{
-        display: none;
+        @include removeItem();
     }
 
     section.table{
@@ -652,80 +673,112 @@ div.languages-form select{
         flex-direction: column;
         text-align: left;
         row-gap: 1.5rem;
-    }
 
-    div.smallest-table > div{
-        border: solid 1px rgb(216, 216, 216);
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-    }
+        i{
+            padding: 0.5rem;
+            color: dodgerblue;
+        }
 
-    div.smallest-table > div > div.price-and-link{
-        margin: 0px;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
+        i.fa-caret-up, i.fa-caret-down{
+            margin: 0.5rem 0.1rem 0.5rem 0.5rem;
+            padding: 0;
+        }
 
-    div.smallest-table div div a.gmail{
-        color: white;
-        font-weight: bold;
-        background: #06f;
-        border-radius: 0.3rem;
-        padding: 0.7rem 1rem;
-        text-decoration: none;
-        font-size: 0.85rem;
-    }
-    
-    div.smallest-table div div a.gmail:hover{
-        background: #1337c0;
-        color: white;
-    }
+        span{
+            font-weight: bold;
+        }
 
-    div.smallest-table div p{
-        font-size: 0.85rem !important;
-    }
-    
-    div.smallest-table div p.price{
-        font-weight: bold;
-    }
-    
-    div.smallest-table span{
-        font-weight: bold;
-    }
-    
-    div.smallest-table div p.price span{
-        font-size: 1.4rem;
-        color: black;
-    }
-    
-    div.smallest-table div p.price.special{
-        font-size: 1rem !important;
-    }
-    
-    div.smallest-table div p.price small{
-        font-weight: lighter;
-        text-decoration: line-through;
-    }
-    
-    div.smallest-table > div >  p > span{
-        font-weight: bold;
-    }
+        > div{
+            border: solid 1px rgb(216, 216, 216);
+            padding: 0.5rem;
+            border-radius: 0.5rem;
 
-    div.smallest-table i{
-        padding: 0.5rem;
-        color: dodgerblue;
-    }
+            > div.price-and-link{
+                margin: 0px;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
 
-    div.smallest-table div div.feature-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        align-items: center;
-        cursor: pointer;
+            > p {
+
+                > span{
+                    font-weight: bold;
+                }
+            }
+
+            > a{
+                padding: 0;
+                margin: 0;
+            }
+
+            > a:first-of-type{
+                color: black;
+            }
+        }
+        
+        div{
+
+            p{
+                font-size: 0.85rem !important;
+            }
+
+            p.price{
+                font-weight: bold;
+
+                span{
+                    font-size: 1.4rem;
+                    color: black;
+                }
+
+                small{
+                    font-weight: lighter;
+                    text-decoration: line-through;
+                }
+            }
+
+            p.price.special{
+                font-size: 1rem !important;
+            }
+
+            div.feature-container{
+                margin-top: 1rem;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                cursor: pointer;
+
+                a{
+                    font: {
+                        weight: normal;
+                        size: 0.85rem;
+                    }
+                    color: $secondary-text-colour;
+                }
+            }
+
+            div{
+
+                a.gmail{
+                    color: white;
+                    font-weight: bold;
+                    background: #06f;
+                    border-radius: 0.3rem;
+                    padding: 0.7rem 1rem;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                }
+
+                a.gmail:hover{
+                    background: #1337c0;
+                    color: white;
+                }
+            }
+        }  
+
     }
 
 }
