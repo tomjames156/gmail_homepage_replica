@@ -1,0 +1,757 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 4rem;
+  background: white;
+  box-shadow: 0.5px 0.5px 5px rgb(196, 196, 196);
+}
+
+div.logo-name {
+  display: flex;
+  column-gap: 0.5rem;
+  justify-content: space-between;
+}
+
+div.logo img {
+  width: 30px;
+  height: auto;
+}
+
+div.name p {
+  font-size: 1.3rem;
+}
+
+div.links {
+  display: flex;
+  column-gap: 1rem;
+}
+
+a.work {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: #06f;
+  background: transparent;
+  font-weight: bold;
+  border: none none none;
+  border-radius: none;
+}
+
+a.work:hover {
+  color: #0052cc;
+  background: aliceblue;
+}
+
+a.sign-in {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: #06f;
+  background: transparent;
+  font-weight: bold;
+  border: solid 1px #d1d1d1;
+  border-radius: 0.3rem;
+}
+
+a.sign-in:hover {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: #0052cc;
+  background: rgb(241, 241, 241);
+  font-weight: bold;
+  border: solid 1px dodgerblue;
+  border-radius: 0.3rem;
+}
+
+a.create-acc, a.get-gmail {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: white;
+  background: #06f;
+  font-weight: bold;
+  border: none none none;
+  border-radius: 0.3rem;
+}
+
+a.create-acc:hover, a.get-gmail:hover {
+  color: "inherit";
+  background: #1337c0;
+}
+
+a.get-gmail {
+  display: none;
+}
+
+section#section-1 {
+  width: 89%;
+  margin: 0 auto 16rem auto;
+  padding-top: 4rem;
+}
+
+div.section-1 {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 4rem;
+}
+
+div.section-1 div.item-1 {
+  width: 40%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+div.section-1 div.item-1 div.text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+div.section-1 div.item-1 div.text h1 {
+  font-size: 3.1rem;
+}
+
+div.section-1 div.item-2 {
+  width: 50%;
+}
+
+div.section-1 div.item-2 div img {
+  width: 900px;
+  align-self: flex-start;
+}
+
+section#section-2 {
+  width: 89%;
+  margin: 0 auto 6rem auto;
+}
+
+div.section-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.section-2 div.item-1 {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+  align-self: flex-start;
+}
+
+div.section-2 div.item-1 h1 {
+  font-size: 2.4rem;
+}
+
+div.features {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  cursor: pointer;
+}
+
+div.features > div {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+div.features > div > span {
+  background: #eef0f1;
+  padding: 0.1rem;
+  border: none;
+  transition: ease all 0.5s;
+}
+
+div.feature {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+div.feature p.header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #606060;
+  cursor: pointer;
+}
+
+div.feature p.description {
+  font-size: 0.95rem;
+  color: #606060;
+}
+
+div.section-2 div.item-2 {
+  align-self: center;
+  width: 50%;
+}
+
+div.section-2 div.item-2 img {
+  width: 750px;
+}
+
+section#section-3 {
+  width: 90%;
+  margin: 0 0 8rem 0;
+}
+
+div.section-3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.section-3 div.item-1 {
+  position: relative;
+}
+
+div.section-3 div.item-1 img {
+  width: 700px;
+  position: absolute;
+  left: -100px;
+  top: 100px;
+}
+
+div.section-3 div.item-2 {
+  width: 30%;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+
+div.section-3 div.item-2 div.text h1 {
+  font-size: 2.4rem;
+}
+
+section#section-4 {
+  width: 100%;
+  background: #f7f8f8;
+  padding: 6rem;
+}
+
+div.section-4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.section-4 div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+div.section-4 > div > p:first-child {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+div.section-4 p.description {
+  color: #606060;
+}
+
+section#section-5 {
+  padding: 6rem 0;
+  width: 89%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div.section-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.section-5 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+div.section-5 p {
+  color: #606060;
+}
+
+div.section-5 p:nth-child(2) {
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+}
+
+div.section-5 a {
+  margin-top: 3rem;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: #06f;
+  background: transparent;
+  font-weight: bold;
+  border: none none none;
+  border-radius: 0;
+}
+
+div.section-5 a:hover {
+  color: #0052cc;
+  background: transparent;
+}
+
+div.section-5 > p:nth-of-type(2) {
+  font-weight: bold;
+}
+
+div.services {
+  display: flex;
+  column-gap: 2rem;
+  margin: 1rem 0 3rem 0;
+}
+
+section.table {
+  width: 95%;
+  margin: 0 auto;
+}
+
+div.smaller-table {
+  display: none;
+}
+
+div.smallest-table {
+  display: none;
+}
+
+section#section-6 {
+  margin: 0 auto;
+  padding: 4rem 3rem;
+  background: #f7f8f8;
+}
+
+div.section-6 {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.section-6 div.item-1 {
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+  align-self: flex-start;
+}
+
+div.section-6 div.item-1 h1 {
+  font-size: 2.4rem;
+}
+
+div.help {
+  background: white;
+  display: flex;
+  padding: 1rem;
+  text-align: justify;
+  flex-direction: column;
+  row-gap: 2rem;
+  border: solid 1px #d1d1d1;
+  border-radius: 0.3rem;
+}
+
+div.help h3 {
+  font-size: 1.3rem;
+}
+
+div.help > p {
+  color: #606060;
+}
+
+.help-center {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: #06f;
+  background: transparent;
+  font-weight: bold;
+  border: solid 1px #d1d1d1;
+  border-radius: 0.3rem;
+}
+
+.help-center:hover {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: #0052cc;
+  background: rgb(241, 241, 241);
+  font-weight: bold;
+  border: solid 1px dodgerblue;
+  border-radius: 0.3rem;
+}
+
+div.section-6 div.item-2 {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+div.section-6 div.item-2 div.qna {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+div.qna {
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+div.question {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: baseline;
+  cursor: pointer;
+}
+
+div.question p {
+  width: 80%;
+  font-size: 1.1rem;
+}
+
+div.question i {
+  position: absolute;
+  top: 0.2rem;
+  right: 0;
+  font-size: 1.3rem;
+  color: #06f;
+  font-weight: bold;
+}
+
+div.answer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+div.answer.hide {
+  display: none;
+}
+
+div.answer p {
+  font-size: 0.9rem;
+  color: #606060;
+}
+
+a.learn {
+  text-decoration: none;
+  color: #06f;
+}
+
+a.learn:hover {
+  color: #1337c0;
+}
+
+section#section-7 {
+  width: 100%;
+  padding: 6rem 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div.section-7 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+div.section-7 h1 {
+  font-size: 2.4rem;
+}
+
+div.section-7 img {
+  width: 40px;
+  height: auto;
+  align-self: center;
+}
+
+div.section-7 p {
+  font-size: 1.5rem;
+}
+
+div.section-7 div.links {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+section#section-8 {
+  width: 100%;
+}
+
+div.footer-img {
+  position: relative;
+}
+
+div.footer-img img {
+  position: absolute;
+  left: -200px;
+  top: 0;
+  width: 1650px;
+}
+
+footer {
+  width: 89%;
+  margin: 16.5rem auto 2rem auto;
+}
+
+div.footer {
+  display: flex;
+  column-gap: 4rem;
+}
+
+div.footer div.item-1 {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+div.footer div.item-1 div.logo {
+  align-self: flex-center;
+  display: flex;
+  align-items: center;
+}
+
+div.footer div.item-1 div.logo img {
+  width: 80px;
+}
+
+div.footer div.footer-links {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+div.footer div.footer-links a {
+  text-decoration: none;
+  color: gray;
+  font-size: 0.85rem;
+}
+
+div.footer div.item-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 2rem;
+}
+
+div.footer div.item-2 div.help-link {
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+div.footer div.item-2 div.help-link i {
+  color: gray;
+}
+
+div.footer div.item-2 div.help-link a {
+  text-decoration: none;
+  color: gray;
+}
+
+div.languages-form select {
+  padding: 0.25rem 10rem 0.25rem 0;
+  font-weight: bold;
+  border: none;
+  color: gray;
+}
+
+@media screen and (max-width: 1024px) {
+  a.get-gmail {
+    display: block;
+  }
+  nav div.links a.create-acc {
+    display: none;
+  }
+  div.smallest-table {
+    display: none;
+  }
+  div.smaller-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+  }
+  div.smaller-table > div {
+    border: solid 1px rgb(213, 213, 213);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    text-align: left;
+  }
+  div.smaller-table > div > a {
+    margin: 1rem;
+  }
+  div.smaller-table > div i {
+    font-size: 0.8rem;
+    color: #06f;
+    margin-right: 0.5rem;
+  }
+  div.smaller-table > div > p > span {
+    font-weight: bold;
+  }
+  div.smaller-table > div p.price {
+    font-weight: bold;
+  }
+  div.smaller-table > div p.price span {
+    font-size: 1.4rem;
+    color: black;
+  }
+  div.smaller-table > div p.price small {
+    font-weight: lighter;
+    text-decoration: line-through;
+  }
+  div.smaller-table > div p.price.special {
+    font-size: 1rem !important;
+  }
+  div.smaller-table div p {
+    font-size: 0.85rem !important;
+  }
+  div.smaller-table div p.usage {
+    font-size: 1rem !important;
+  }
+  div.smaller-table div p.usage a {
+    padding: 0;
+    margin: 0;
+  }
+  div.smaller-table div p.usage:nth-of-type(1) {
+    font-weight: bold;
+    color: black;
+  }
+  div.smaller-table div div.link {
+    padding: 0.75rem 0;
+    margin-bottom: 1rem;
+  }
+  div.smaller-table div div a.gmail {
+    color: white;
+    font-weight: bold;
+    background: #06f;
+    border-radius: 0.3rem;
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin: 1.5rem 0;
+  }
+  div.smaller-table div div a.gmail:hover {
+    background: #1337c0;
+  }
+  div.smaller-table span {
+    font-weight: bold;
+  }
+  section.small-table p.info {
+    text-align: left;
+    font-size: 0.7rem;
+    margin: 1rem 0;
+  }
+  section.small-table p.info.second {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.smaller-table {
+    display: none;
+  }
+  section.table {
+    width: unset;
+  }
+  div.smallest-table {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    row-gap: 1.5rem;
+  }
+  div.smallest-table i {
+    padding: 0.5rem;
+    color: dodgerblue;
+  }
+  div.smallest-table i.fa-caret-up, div.smallest-table i.fa-caret-down {
+    margin: 0.5rem 0.1rem 0.5rem 0.5rem;
+    padding: 0;
+  }
+  div.smallest-table span {
+    font-weight: bold;
+  }
+  div.smallest-table > div {
+    border: solid 1px rgb(216, 216, 216);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  div.smallest-table > div > div.price-and-link {
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  div.smallest-table > div > p > span {
+    font-weight: bold;
+  }
+  div.smallest-table > div > a {
+    padding: 0;
+    margin: 0;
+  }
+  div.smallest-table > div > a:first-of-type {
+    color: black;
+  }
+  div.smallest-table div p {
+    font-size: 0.85rem !important;
+  }
+  div.smallest-table div p.price {
+    font-weight: bold;
+  }
+  div.smallest-table div p.price span {
+    font-size: 1.4rem;
+    color: black;
+  }
+  div.smallest-table div p.price small {
+    font-weight: lighter;
+    text-decoration: line-through;
+  }
+  div.smallest-table div p.price.special {
+    font-size: 1rem !important;
+  }
+  div.smallest-table div div.feature-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+  }
+  div.smallest-table div div.feature-container a {
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: #606060;
+  }
+  div.smallest-table div div a.gmail {
+    color: white;
+    font-weight: bold;
+    background: #06f;
+    border-radius: 0.3rem;
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+  div.smallest-table div div a.gmail:hover {
+    background: #1337c0;
+    color: white;
+  }
+}
