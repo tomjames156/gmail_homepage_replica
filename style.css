@@ -36,9 +36,56 @@ div.name p {
   font-size: 1.3rem;
 }
 
-div.links {
+nav div.links {
   display: flex;
   column-gap: 1rem;
+}
+nav div.links a.work {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: #06f;
+  background: transparent;
+  font-weight: bold;
+  border: none none none;
+  border-radius: none;
+}
+nav div.links a.work:hover {
+  color: #0052cc;
+  background: aliceblue;
+}
+nav div.links a.sign-in {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: #06f;
+  background: transparent;
+  font-weight: bold;
+  border: solid 1px #d1d1d1;
+  border-radius: 0.3rem;
+}
+nav div.links a.sign-in:hover {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: #0052cc;
+  background: rgb(241, 241, 241);
+  font-weight: bold;
+  border: solid 1px dodgerblue;
+  border-radius: 0.3rem;
+}
+nav div.links a.create-acc, nav div.links a.get-gmail {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: white;
+  background: #06f;
+  font-weight: bold;
+  border: none none none;
+  border-radius: 0.3rem;
+}
+nav div.links a.create-acc:hover, nav div.links a.get-gmail:hover {
+  color: "inherit";
+  background: #1337c0;
+}
+nav div.links a.get-gmail {
+  display: none;
 }
 
 a.work {
@@ -320,6 +367,144 @@ section.table {
   margin: 0 auto;
 }
 
+div.table table {
+  border-collapse: collapse !important;
+  margin: 0 auto;
+}
+div.table table .business, div.table table .personal {
+  background: #e8f0fd;
+  color: #06f;
+  font-weight: normal;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+div.table table .personal {
+  background: #f8f9fb;
+  color: black;
+}
+div.table table td {
+  border: solid 1px #e4e4e4;
+  padding: 0.5rem 1rem;
+}
+div.table table i.fa-check {
+  color: #06f;
+}
+div.table table i.fa-minus {
+  color: #939393;
+}
+div.table table .cost-get td:first-of-type {
+  border: none;
+}
+div.table table .cost-get td {
+  padding: 0.5rem;
+}
+div.table table .cost-get td .type {
+  font-size: 1rem;
+}
+div.table table .cost-get td p {
+  font-size: 0.9rem;
+}
+div.table table .cost-get td i {
+  margin: 0 0.5rem;
+}
+div.table table .cost-get td p:nth-of-type(3) {
+  font-size: 0.85rem !important;
+}
+div.table table .cost-get td p:nth-of-type(3) span {
+  font-weight: bold;
+}
+div.table table .cost-get td > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 0.1rem;
+  margin-top: -2.5rem;
+}
+div.table table .cost-get td > div p:nth-of-type(1) {
+  align-self: center;
+}
+div.table table .cost-get td > div .cost.no-cost {
+  color: #606060;
+  font-size: 1.3rem !important;
+}
+div.table table .cost-get td > div .cost {
+  margin-top: -1rem;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+div.table table .cost-get td > div .cost small {
+  color: #606060;
+  font-size: 0.85rem;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+div.table table .cost-get td > div div {
+  display: flex;
+  justify-content: center;
+  margin-top: -1.5rem;
+}
+div.table table .cost-get td > div div a.get-gmail {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: white;
+  background: #06f;
+  font-weight: bold;
+  border: none none none;
+  border-radius: 0.3rem;
+  display: inline;
+}
+div.table table .cost-get td > div div a.get-gmail:hover {
+  color: "inherit";
+  background: #1337c0;
+}
+div.table table .cost-get td:nth-of-type(2) p:first-of-type {
+  margin-top: 2.3rem;
+}
+div.table table .cost-get td:nth-of-type(2) p:first-of-type a {
+  color: black;
+  margin-top: 1rem;
+}
+div.table table .cost-get td:nth-of-type(2) p:nth-of-type(2) {
+  padding-top: 0.7rem;
+}
+div.table table .cost-get td:nth-of-type(2) div {
+  padding-top: 1.4rem;
+}
+div.table table .with_logo, div.table table .without_logo {
+  border-left: none;
+}
+div.table table .with_logo p, div.table table .without_logo p {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left;
+}
+div.table table .with_logo p span, div.table table .without_logo p span {
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+div.table table .with_logo p img, div.table table .without_logo p img {
+  width: 30px;
+  height: auto;
+  margin: 0 1rem 0 0.5rem;
+}
+div.table table .without_logo p {
+  margin-left: 3.4rem;
+}
+div.table table tr.feature-description p {
+  font-size: 0.85rem !important;
+}
+div.table table tr.feature-description p span {
+  font-weight: bold;
+}
+
+p.info {
+  font-size: 0.75rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+
 div.smaller-table {
   display: none;
 }
@@ -521,9 +706,8 @@ div.footer div.item-1 {
 }
 
 div.footer div.item-1 div.logo {
-  align-self: flex-center;
+  align-self: center;
   display: flex;
-  align-items: center;
 }
 
 div.footer div.item-1 div.logo img {
@@ -572,10 +756,114 @@ div.languages-form select {
 }
 
 @media screen and (max-width: 1024px) {
-  a.get-gmail {
+  section p {
+    font-size: 1rem;
+  }
+  section#section-1 {
+    padding-top: 8rem;
+  }
+  div.section-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  div.section-1 div.item-1 {
+    width: 95%;
+  }
+  div.section-1 div.item-1 div.text h1 {
+    font-size: 2rem;
+  }
+  div.section-1 div.item-2 div img {
+    width: 500px;
+  }
+  div.section-2 {
+    flex-direction: column;
+  }
+  div.section-2 div.item-1 {
+    width: 100%;
+  }
+  div.section-2 div.item-2 {
+    width: 100%;
+  }
+  div.section-2 div.item-2 img {
+    width: 500px;
+  }
+  section#section-3 {
+    margin: 0 auto 8rem auto;
+  }
+  section#section-3 div.section-3 {
+    flex-direction: column-reverse;
+  }
+  section#section-3 div.section-3 div.item-1 img {
+    position: relative;
+  }
+  section#section-3 div.section-3 div.item-2 {
+    width: 100%;
+  }
+  section#section-4 {
+    padding: 6rem 4rem 6rem 1rem;
+  }
+  section#section-4 div.section-4 {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  section#section-4 div.section-4 div {
+    width: 100%;
+  }
+  div.services {
+    flex-wrap: wrap;
+  }
+  section#section-6 {
+    padding: 4rem 1rem;
+  }
+  div.section-6 {
+    flex-direction: column-reverse;
+    row-gap: 2rem;
+  }
+  div.section-6 h1.hide {
+    display: none;
+  }
+  div.section-6 h1.show {
     display: block;
   }
+  div.section-6 div.item-1 {
+    width: 100%;
+  }
+  div.section-6 div.item-2 {
+    width: 100%;
+  }
+  div.section-7 {
+    width: 90%;
+    align-items: center;
+  }
+  div.footer-img img {
+    position: relative;
+    left: -500px;
+    top: 0;
+    width: 1500px;
+    height: auto;
+  }
   nav div.links a.create-acc {
+    display: none;
+  }
+  nav div.links a.get-gmail {
+    display: block;
+  }
+  div.footer {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  div.footer div.item-1 {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  div.footer div.item-1 div.footer-links {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+  div.footer div.item-1 div.logo {
+    align-self: flex-start;
+  }
+  div.table {
     display: none;
   }
   div.smallest-table {
@@ -640,16 +928,16 @@ div.languages-form select {
     margin-bottom: 1rem;
   }
   div.smaller-table div div a.gmail {
-    color: white;
-    font-weight: bold;
-    background: #06f;
-    border-radius: 0.3rem;
-    padding: 0.7rem 1rem;
     text-decoration: none;
-    font-size: 0.85rem;
-    margin: 1.5rem 0;
+    padding: 0.7rem 1rem;
+    color: white;
+    background: #06f;
+    font-weight: bold;
+    border: none none none;
+    border-radius: 0.3rem;
   }
   div.smaller-table div div a.gmail:hover {
+    color: "inherit";
     background: #1337c0;
   }
   div.smaller-table span {
@@ -665,6 +953,15 @@ div.languages-form select {
   }
 }
 @media screen and (max-width: 600px) {
+  nav div.links a.get-gmail {
+    display: none;
+  }
+  nav div.links a.work {
+    display: none;
+  }
+  div.table {
+    display: none;
+  }
   div.smaller-table {
     display: none;
   }
@@ -688,29 +985,36 @@ div.languages-form select {
   div.smallest-table span {
     font-weight: bold;
   }
+  div.smallest-table .no-style {
+    color: black;
+  }
+  div.smallest-table .no-style:hover {
+    color: black;
+  }
   div.smallest-table > div {
     border: solid 1px rgb(216, 216, 216);
     padding: 0.5rem;
     border-radius: 0.5rem;
   }
-  div.smallest-table > div > div.price-and-link {
-    margin: 0px;
-    padding: 0;
+  div.smallest-table > div .price-and-link {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    margin-top: -0.5rem;
   }
-  div.smallest-table > div > p > span {
+  div.smallest-table > div .price-and-link div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    margin-top: -1rem;
+  }
+  div.smallest-table > div p span {
     font-weight: bold;
   }
-  div.smallest-table > div > a {
+  div.smallest-table > div a {
+    color: #06f;
     padding: 0;
-    margin: 0;
   }
-  div.smallest-table > div > a:first-of-type {
-    color: black;
+  div.smallest-table > div a i {
+    color: inherit;
   }
   div.smallest-table div p {
     font-size: 0.85rem !important;
@@ -730,7 +1034,6 @@ div.languages-form select {
     font-size: 1rem !important;
   }
   div.smallest-table div div.feature-container {
-    margin-top: 1rem;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -742,16 +1045,16 @@ div.languages-form select {
     color: #606060;
   }
   div.smallest-table div div a.gmail {
-    color: white;
-    font-weight: bold;
-    background: #06f;
-    border-radius: 0.3rem;
-    padding: 0.7rem 1rem;
     text-decoration: none;
-    font-size: 0.8rem;
+    padding: 0.7rem 1rem;
+    color: white;
+    background: #06f;
+    font-weight: bold;
+    border: none none none;
+    border-radius: 0.3rem;
   }
   div.smallest-table div div a.gmail:hover {
+    color: "inherit";
     background: #1337c0;
-    color: white;
   }
 }
