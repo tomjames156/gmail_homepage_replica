@@ -114,7 +114,7 @@ div.section-1 div.item-1{
     width: 40%;
     align-self: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     row-gap: 2rem;
 }
 
@@ -770,7 +770,6 @@ div.languages-form select{
             div{
 
                 img{
-                    // margin: 0 auto;
                     width: 500px;
                 }
             }
@@ -808,7 +807,7 @@ div.languages-form select{
             }
         }
     
-      }
+    }
 
     section#section-4{
         padding: 6rem 4rem 6rem 1rem;
@@ -1033,6 +1032,49 @@ div.languages-form select{
         }
     }
     
+    div.section-1{
+        flex-direction: column;
+        align-items: center;
+
+        div.item-1{
+            width: 95%;
+
+            div.text{
+
+                h1{
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        div.item-2{
+            div{
+
+                img{
+                    width: 500px;
+                    margin-left: -100px;
+                }
+            }
+        }
+    }
+
+    section#section-3 {
+
+        div.section-3{    
+
+            div.item-1{
+                img{
+                    position: relative;
+                    width: 500px;
+                    align-self: center;
+                }}
+    
+            div.item-2{
+                width: 100%;
+            }
+        }
+    
+    }
 
     div.table{
         @include removeItem();

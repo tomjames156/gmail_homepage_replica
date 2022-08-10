@@ -959,6 +959,28 @@ div.languages-form select {
   nav div.links a.work {
     display: none;
   }
+  div.section-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  div.section-1 div.item-1 {
+    width: 95%;
+  }
+  div.section-1 div.item-1 div.text h1 {
+    font-size: 2rem;
+  }
+  div.section-1 div.item-2 div img {
+    width: 500px;
+    margin-left: -100px;
+  }
+  section#section-3 div.section-3 div.item-1 img {
+    position: relative;
+    width: 500px;
+    align-self: center;
+  }
+  section#section-3 div.section-3 div.item-2 {
+    width: 100%;
+  }
   div.table {
     display: none;
   }
