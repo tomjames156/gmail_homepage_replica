@@ -34,9 +34,40 @@ div.name p{
     font-size: 1.3rem;
 }
 
-div.links{
-    display: flex;
-    column-gap: 1rem;
+nav{
+    div.links{
+        display: flex;
+        column-gap: 1rem;
+    
+        a.work{
+            @include make-btn($light_blue_btn, transparent, none, none, none, none);
+        }
+        
+        a.work:hover{
+            @include btn-hover(aliceblue, darken($light_blue_btn, 10));
+        }
+        
+        a.sign-in{
+            @include make-btn($light_blue_btn, transparent, solid, #d1d1d1, 1px, 0.3rem);
+        }
+        
+        a.sign-in:hover{
+            @include make_btn(darken($light_blue_btn, 10), rgb(241, 241, 241), solid, dodgerblue, 1px, 0.3rem);
+        }
+        
+        a.create-acc, a.get-gmail{
+            @include make-btn(white, $light_blue_btn, none, none, none, 0.3rem);
+        }
+        
+        a.create-acc:hover, a.get-gmail:hover{
+            @include btn-hover($dark_blue_btn);
+        }
+        
+        a.get-gmail{
+            @include removeItem()
+        }
+        
+    }
 }
 
 a.work{
@@ -83,7 +114,7 @@ div.section-1 div.item-1{
     width: 40%;
     align-self: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     row-gap: 2rem;
 }
 
@@ -287,6 +318,188 @@ section.table{
     margin: 0 auto;
 }
 
+div.table{
+    
+    table{
+        border-collapse: collapse !important;
+        margin: 0 auto;
+
+        .business{
+            background: $business_table_header_bg;
+            color: $light_blue_btn;
+            font-weight: normal;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .personal{
+            @extend .business;
+            background: $personal_table_header_bg;
+            color: black;
+        }
+
+        
+        td{
+            border: solid 1px $table-border-colour;
+            padding: 0.5rem 1rem;
+        }
+
+        i.fa-check{
+            color: $light_blue_btn;
+        }
+
+        i.fa-minus{
+            color: $minus_icon_color;
+        }
+
+        .cost-get{
+
+            td:first-of-type{
+                border: none;
+            }
+            
+            td{
+                padding: 0.5rem;
+
+                .type{ 
+                    font-size: 1rem;       
+                }
+
+                p{
+                    font-size: 0.9rem;
+                }
+
+                i{
+                    margin: 0 0.5rem;
+                }
+
+                p:nth-of-type(3){
+                    font-size: 0.85rem !important;
+                    
+                    span{
+                        font-weight: bold;
+                    }
+                }
+
+                > div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    row-gap: 0.1rem;
+                    margin-top: -2.5rem;
+
+                    p:nth-of-type(1){
+                        align-self: center;
+                    }
+
+                    .cost.no-cost{
+                        color: $secondary-text-colour;
+                        font-size: 1.3rem !important;
+                    }
+
+
+                    .cost{
+                        margin-top: -1rem;
+                        color: black;
+                        font-size: 1.3rem;
+                        font-weight: bold;
+
+                        small{
+                            color: $secondary-text-colour;
+                            font-size: 0.85rem;
+                            font-weight: normal;
+                            text-decoration: line-through;
+                        }
+                    }
+
+                    div{
+                        display: flex;
+                        justify-content: center;
+                        margin-top: -1.5rem;
+
+                        a.get-gmail{
+                            @include make-btn(white, $light_blue_btn, none, none, none, 0.3rem);
+                            display: inline;
+                        }
+                        
+                        a.get-gmail:hover{
+                            @include btn-hover($dark_blue_btn);
+                        }                        
+                    }
+                }
+            }
+
+            td:nth-of-type(2){
+                p:first-of-type{
+                    margin-top: 2.3rem;
+                    a{
+                        color: black;
+                        margin-top: 1rem;
+                    }
+                }
+                
+                p:nth-of-type(2){
+                    padding-top: 0.7rem;
+                }
+
+                div{
+                    padding-top: 1.4rem;
+                }
+            }
+
+        }
+
+        .with_logo{  
+            border-left: none;  
+            
+            p{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                text-align: left;
+
+                span{
+                    font-weight: bold;
+                    margin-right: 0.3rem;
+                }
+
+                img{
+                    width: 30px;
+                    height: auto;
+                    margin: 0 1rem 0 0.5rem;
+                }
+            }
+
+        }
+
+        .without_logo{
+
+            @extend .with_logo;
+
+             p{
+                margin-left: 3.4rem;
+             }
+        }
+
+        tr.feature-description{
+            p{
+                font-size: 0.85rem !important;
+                
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+
+    }
+}
+
+p.info{
+    font-size: 0.75rem;
+    text-align: left;
+    margin-top: 1rem;
+}
+
 div.smaller-table{
     display: none;
 }
@@ -477,9 +690,8 @@ div.footer div.item-1{
 }
 
 div.footer div.item-1 div.logo{
-    align-self: flex-center;
+    align-self: center;
     display: flex;
-    align-items: center;
 }
 
 div.footer div.item-1 div.logo img{
@@ -528,11 +740,166 @@ div.languages-form select{
 }
 
 @media screen and (max-width: 1024px){
-    a.get-gmail{
-        display: block;
+
+    section{
+        p{
+            font-size: 1rem;
+        }
     }
 
-    nav div.links a.create-acc{
+    section#section-1{
+        padding-top: 8rem;
+    }
+
+    div.section-1{
+        flex-direction: column;
+        align-items: center;
+
+        div.item-1{
+            width: 95%;
+
+            div.text{
+
+                h1{
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        div.item-2{
+            div{
+
+                img{
+                    width: 500px;
+                }
+            }
+        }
+    }
+
+    div.section-2{
+        flex-direction: column;
+
+        div.item-1{
+            width: 100%;
+        }
+
+        div.item-2{
+            width: 100%;
+            img{
+                width: 500px;
+            }
+        }
+    }
+
+    section#section-3 {
+        margin: 0 auto 8rem auto;
+
+        div.section-3{
+            flex-direction: column-reverse;
+    
+            div.item-1{
+                img{
+                    position: relative;
+                }}
+    
+            div.item-2{
+                width: 100%;
+            }
+        }
+    
+    }
+
+    section#section-4{
+        padding: 6rem 4rem 6rem 1rem;
+
+        div.section-4{
+            flex-direction: column;
+            row-gap: 2rem;
+    
+            div{
+                width: 100%;
+            }
+        }
+    }
+
+    div.services{
+        flex-wrap: wrap;
+    }
+
+    section#section-6{
+        padding: 4rem 1rem;
+    }
+
+    div.section-6{
+        flex-direction: column-reverse;
+        row-gap: 2rem;
+        
+        h1.hide{
+            display: none;
+        }
+
+        h1.show{
+            display: block;
+        }
+
+        div.item-1{
+            width: 100%;
+        }
+
+        div.item-2{
+            width: 100%;
+        }
+    }
+
+    div.section-7{
+        width: 90%;
+        align-items: center;
+    }
+
+    div.footer-img{
+        img{
+            position: relative;
+            left: -500px;
+            top: 0;
+            width: 1500px;
+            height: auto;
+        }
+    } 
+
+    nav{
+
+        div.links{
+            a.create-acc{
+                @include removeItem();
+            }
+        
+            a.get-gmail{
+                display: block;
+            }
+        }
+    }
+
+    div.footer{
+        flex-direction: column;
+        row-gap: 2rem;
+
+        div.item-1{
+            flex-direction: column;
+            row-gap: 2rem;
+
+            div.footer-links{
+                flex-wrap: wrap;
+                row-gap: 1rem;
+            }
+
+            div.logo{
+                align-self: flex-start;
+            }
+        }
+
+    }
+
+    div.table{
         @include removeItem();
     }
     
@@ -618,19 +985,11 @@ div.languages-form select{
             div{
 
                 a.gmail{
-                    // extend something
-                    color: white;
-                    font-weight: bold;
-                    background: #06f;
-                    border-radius: 0.3rem;
-                    padding: 0.7rem 1rem;
-                    text-decoration: none;
-                    font-size: 0.85rem;
-                    margin: 1.5rem 0;
+                    @include make-btn(white, $light_blue_btn, none, none, none, 0.3rem);                    
                 }
 
                 a.gmail:hover{
-                    background: #1337c0;
+                    @include btn-hover($dark_blue_btn);
                 }
     
             }
@@ -660,6 +1019,67 @@ div.languages-form select{
 }
 
 @media screen and (max-width: 600px){
+    nav{
+
+        div.links{
+            a.get-gmail{
+                @include removeItem();
+            }
+        
+            a.work{
+                @include removeItem();
+            }
+        }
+    }
+    
+    div.section-1{
+        flex-direction: column;
+        align-items: center;
+
+        div.item-1{
+            width: 95%;
+
+            div.text{
+
+                h1{
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        div.item-2{
+            div{
+
+                img{
+                    width: 500px;
+                    margin-left: -100px;
+                }
+            }
+        }
+    }
+
+    section#section-3 {
+
+        div.section-3{    
+
+            div.item-1{
+                img{
+                    position: relative;
+                    width: 500px;
+                    align-self: center;
+                }}
+    
+            div.item-2{
+                width: 100%;
+            }
+        }
+    
+    }
+
+    div.table{
+        @include removeItem();
+    }
+
     div.smaller-table{
         @include removeItem();
     }
@@ -683,9 +1103,17 @@ div.languages-form select{
             margin: 0.5rem 0.1rem 0.5rem 0.5rem;
             padding: 0;
         }
-
+        
         span{
             font-weight: bold;
+        }
+
+        .no-style{
+            color: black;
+        }
+
+        .no-style:hover{
+            color: black;            
         }
 
         > div{
@@ -693,30 +1121,32 @@ div.languages-form select{
             padding: 0.5rem;
             border-radius: 0.5rem;
 
-            > div.price-and-link{
-                margin: 0px;
-                padding: 0;
+            .price-and-link{
                 display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
                 justify-content: space-between;
-                align-items: center;
+                margin-top: -0.5rem;
+
+                div:first-of-type{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: -1rem;
+                }
             }
 
-            > p {
+            p {
 
-                > span{
+                span{
                     font-weight: bold;
                 }
             }
 
-            > a{
+            a{
+                color: $light_blue_btn;
                 padding: 0;
-                margin: 0;
-            }
 
-            > a:first-of-type{
-                color: black;
+                i{
+                    color: inherit;
+                }
             }
         }
         
@@ -745,7 +1175,6 @@ div.languages-form select{
             }
 
             div.feature-container{
-                margin-top: 1rem;
                 display: flex;
                 justify-content: left;
                 align-items: center;
@@ -763,18 +1192,11 @@ div.languages-form select{
             div{
 
                 a.gmail{
-                    color: white;
-                    font-weight: bold;
-                    background: #06f;
-                    border-radius: 0.3rem;
-                    padding: 0.7rem 1rem;
-                    text-decoration: none;
-                    font-size: 0.8rem;
+                    @include make-btn(white, $light_blue_btn, none, none, none, 0.3rem);
                 }
 
                 a.gmail:hover{
-                    background: #1337c0;
-                    color: white;
+                    @include btn-hover($dark_blue_btn);
                 }
             }
         }  
