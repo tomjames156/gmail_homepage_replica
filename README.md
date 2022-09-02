@@ -20,12 +20,16 @@ This is the replica of the gmail landing page built with HTML, CSS, SASS and Jav
 
 ### Screenshot
 
-![](./screenshots/blue-theme-desktop.png)
-![](./screenshots/blue-theme-mobile.png)
-![](./screenshots/beige-theme-desktop.png)
-![](./screenshots/beige-theme-mobile.png)
-![](./screenshots/purple-theme-desktop.png)
-![](./screenshots/purple-theme-mobile.png)
+![](./screenshots/screenshot(1).png)
+![](./screenshots/screenshot(2).png)
+![](./screenshots/screenshot(3).png)
+![](./screenshots/screenshot(4).png)
+![](./screenshots/screenshot(5).png)
+![](./screenshots/screenshot(6).png)
+![](./screenshots/screenshot(7).png)
+![](./screenshots/screenshot(8).png)
+![](./screenshots/screenshot(9).png)
+![](./screenshots/screenshot(10).png)
 
 ### Links
 
