@@ -600,6 +600,7 @@ div.question {
   position: relative;
   align-items: baseline;
   cursor: pointer;
+  transition: 0.4s;
 }
 
 div.question p {
@@ -626,9 +627,14 @@ div.answer.hide {
   display: none;
 }
 
+div.answer.hide p{
+  color: transparent;
+}
+
 div.answer p {
   font-size: 0.9rem;
   color: #606060;
+  transition: color ease 0.6s;
 }
 
 a.learn {
