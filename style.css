@@ -6,7 +6,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
 }
 
 nav {
@@ -143,15 +142,16 @@ a.get-gmail {
 }
 
 section#section-1 {
-  width: 89%;
+  width: 100%;
   margin: 0 auto 16rem auto;
-  padding-top: 4rem;
+  padding: 4rem 0 0 4rem;
 }
 
 div.section-1 {
   display: flex;
   justify-content: space-between;
   column-gap: 4rem;
+  overflow-x: hidden;
 }
 
 div.section-1 div.item-1 {
@@ -182,8 +182,10 @@ div.section-1 div.item-2 div img {
 }
 
 section#section-2 {
-  width: 89%;
+  width: 100%;
   margin: 0 auto 6rem auto;
+  padding: 0 0 0 4rem;
+  overflow-x: hidden;
 }
 
 div.section-2 {
@@ -682,22 +684,18 @@ div.section-7 div.links {
 
 section#section-8 {
   width: 100%;
+  overflow-x: hidden;
 }
 
-div.footer-img {
-  position: relative;
-}
-
-div.footer-img img {
-  position: absolute;
-  left: -200px;
+div.footer-img img {  
+  margin-left: -200px;
   top: 0;
   width: 1650px;
 }
 
 footer {
   width: 89%;
-  margin: 16.5rem auto 2rem auto;
+  margin: 2rem auto 2rem auto;
 }
 
 div.footer {
@@ -762,11 +760,17 @@ div.languages-form select {
 }
 
 @media screen and (max-width: 1024px) {
+  body{
+    overflow-x: hidden;
+  }
+  h1{
+    font-size: 1.6rem !important;
+  }
   section p {
     font-size: 1rem;
   }
   section#section-1 {
-    padding-top: 8rem;
+    padding: 8rem 0 0 0;
   }
   div.section-1 {
     flex-direction: column;
@@ -774,12 +778,19 @@ div.languages-form select {
   }
   div.section-1 div.item-1 {
     width: 95%;
+    padding-left: 1rem;
   }
   div.section-1 div.item-1 div.text h1 {
     font-size: 2rem;
   }
+  div.section-1 div.item-2{
+    margin-left: -3rem;
+  }
   div.section-1 div.item-2 div img {
-    width: 500px;
+    width: 550px;
+  }
+  section#section-2{
+    padding-left: 1rem;
   }
   div.section-2 {
     flex-direction: column;
@@ -788,10 +799,11 @@ div.languages-form select {
     width: 100%;
   }
   div.section-2 div.item-2 {
-    width: 100%;
+    width: 90%;
+    overflow-x: hidden;
   }
   div.section-2 div.item-2 img {
-    width: 500px;
+    width: 500px; 
   }
   section#section-3 {
     margin: 0 auto 8rem auto;
@@ -841,13 +853,18 @@ div.languages-form select {
     width: 90%;
     align-items: center;
   }
-  div.footer-img img {
+  div.footer-img {
     position: relative;
-    left: -500px;
+  }
+  
+  div.footer-img img{
+    position: absolute;
+    right: -2500px;
     top: 0;
-    width: 1500px;
+    width: 1000px;
     height: auto;
   }
+
   nav div.links a.create-acc {
     display: none;
   }
