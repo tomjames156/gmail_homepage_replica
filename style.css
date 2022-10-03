@@ -801,7 +801,7 @@ div.languages-form select {
     flex-direction: column;
   }
   div.section-2 div.item-1 {
-    width: 100%;
+    width: 95%;
     padding-left: 1rem;
   }
   div.section-2 div.item-2 {
@@ -824,7 +824,7 @@ div.languages-form select {
     margin-left: 2rem;
   }
   section#section-3 div.section-3 div.item-2 {
-    width: 100%;
+    width: 95%;
   }
   section#section-4 {
     padding: 6rem 4rem 6rem 1rem;
